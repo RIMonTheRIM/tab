@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body{
+        height: 100vh;
+        width: 100vw;
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-family: roboto;
+        align-items: center;
+        justify-content: center;
+    }
+    #leftContent{
+        display: flex;
+        flex-direction: column;
+        width: 40%;
+        align-items: center;
+        justify-content: space-evenly;
+        padding: 5%;
+        box-sizing: border-box;
+        background-color: lightgray;
+    }
+    #content{
+        display: flex;
+        height: 70vh;
+        width: 70vw;
+        border: 1px black solid;
+        background-color: darkgray;
+    }
+    table{
+        width: 60%;
+        height: fit-content;
+        background-color: red;
+        border-collapse: collapse;
+        text-align: center;
+        border: 2px black solid;
+    }
+    th,td{
+        height: 1.5em;
+        border: 2px black solid;
+        background-color: darkgray;
+    }
+    button{
+        border-radius: 100vh;
+        margin-left: 0.2em;
+        margin-right: 0.2em;
+    }
+</style>
+<body>
+    <div id="content">
+        <div id="leftContent">
+            <label>Prenom<br/><input type="text"></label>
+            <label>Nom<br/><input type="text"></label>
+            <label>Date de naissance<br/><input type="text"></label>
+            <label>Email<br/><input type="text"></label>
+            <div><button>Enregistrer</button><button>Effacer</button></div>
+        </div>
+        <table>
+            <tr>
+                <th>ID</th>
+                <th>Prenom</th>
+                <th>Nom</th>
+                <th>Email</th>
+                <th>Action</th>
+            </tr>
+            <tr>
+                <td>null</td>
+                <td>null</td>
+                <td>null</td>
+                <td>null</td>
+                <td><button>Supprimer</button><button>Modifier</button></td>
+                
+            </tr>
+        </table>
+    </div>
+</body>
+</html>
