@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Formulaire</title>
 </head>
 <style>
     body{
@@ -23,17 +23,16 @@
         display: flex;
         flex-direction: column;
         width: 40%;
-        align-items: center;
+        align-items:flex-start;
         justify-content: space-evenly;
         padding: 5%;
         box-sizing: border-box;
         background-color: lightgray;
+        flex-grow: 1;
     }
     #content{
         display: flex;
-        height: 70vh;
-        width: 70vw;
-        border: 1px black solid;
+        width: 90vw;
         background-color: darkgray;
     }
     table{
@@ -46,29 +45,64 @@
     }
     th,td{
         height: 1.5em;
-        border: 2px black solid;
+        border: 1px #d3d3d3 solid;
         background-color: darkgray;
     }
+    th{
+        color: black;
+    }
+    td{
+        font-size: 0.8em;
+    }
     button{
-        border-radius: 100vh;
+        border-radius: 0.5em;
         margin-left: 0.2em;
         margin-right: 0.2em;
+        border: 1px solid black;
+    }
+    input{
+        width:15em;
+        margin: 0.5em;
+        margin-left: 0;
+    }
+    #btnEnregistrer{
+        background-color: green;
+        color: white;
+    }
+    #btnEnregistrer:hover{
+        background-color: rgb(20, 190, 20);
+    }
+    #btnEffacer{
+        background-color: rgb(167, 5, 5);
+        color: white;
+    }
+    #btnEffacer:hover{
+        background-color: rgb(207, 6, 6);
+    }
+    #btnGenerer{
+        background-color: #1A5F7A;
+        color: white;
+    }
+    #btnGenerer:hover{
+        background-color: #159895;
     }
 </style>
 <body>
     <div id="content">
         <div id="leftContent">
-            <label>Prenom<br/><input type="text"></label>
-            <label>Nom<br/><input type="text"></label>
-            <label>Date de naissance<br/><input type="text"></label>
-            <label>Email<br/><input type="text"></label>
-            <div><button>Enregistrer</button><button>Effacer</button></div>
+            <label>Prenom<br/><input id="Prenom" type="text" placeholder="Entrez votre prénom"></label>
+            <label>Nom<br/><input id="Nom" type="text" placeholder="Entrez votre nom"></label>
+            <label>Date de naissance<br/><input id="Date" type="date" placeholder="Date de naissance"></label>
+            <button id="btnGenerer">Generer</button>
+            <label>Email<br/><input id="Email" type="text" placeholder="Votre Email" disabled></label>
+            <div id="btnContainer"><button id="btnEnregistrer">Enregistrer</button><button id="btnEffacer" >Effacer</button></div>
         </div>
-        <table>
+        <table id="tableContent">
             <tr>
                 <th>ID</th>
                 <th>Prenom</th>
                 <th>Nom</th>
+                <th>Date</th>
                 <th>Email</th>
                 <th>Action</th>
             </tr>
@@ -77,10 +111,11 @@
                 <td>null</td>
                 <td>null</td>
                 <td>null</td>
-                <td><button>Supprimer</button><button>Modifier</button></td>
-                
+                <td>null</td>
+                <td><button class="btnSupprimer">Supprimer</button><button class="btnModifier">Modifier</button></td>   
             </tr>
         </table>
     </div>
 </body>
+<script src="form.js" ></script>
 </html>
